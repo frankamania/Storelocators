@@ -78,11 +78,10 @@ class scraper(BaseScraper):
             Address = soup.find('div',{"class":'street-address'}).text
             Zip = soup.find('span',{"class":'postal-code'}).text
 
+        Brand = self.scrape_store_name
 
-
-
-
-        yield dict(Name=Name, Status=Status, Address=Address, State=State,Locality =Locality, Zip=Zip, Country=Country,
+        yield dict(Name=Name, Brand=Brand, Status=Status, Address=Address, State=State, Locality=Locality, Zip=Zip,
+                   Country=Country,
                    PhoneNumbers=PhoneNumbers, Website=Website, Emails=Emails, Latitude=Latitude, Longitude=Longitude)
 
 if __name__ == '__main__':
