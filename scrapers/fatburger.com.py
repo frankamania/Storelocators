@@ -7,7 +7,6 @@ class scraper(BaseScraper):
 
     def __init__(self):
         super().__init__(
-            base_folder_path='Datasets',
             scrape_domain='fatburger.com',
             scrape_store_name='Fatburger',
         )
